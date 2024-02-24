@@ -24,9 +24,6 @@ describe('Task Api', () => {
             })
         })
         it("It Shoul Add The Book", (done) => {
-            router.post('/findBook', BookController.bookGet);
-            router.post('/updateBook', BookController.bookUpdate);
-            router.post('/bookDelete', BookController.bookDelete);
             let payLoad = {
                 title: 'Yuvaraj Test',
                 author: "Yuvaraj",
@@ -40,8 +37,6 @@ describe('Task Api', () => {
             })
         })
         it("It Shoul Find The Book Using The ISBN Number", (done) => {
-            router.post('/updateBook', BookController.bookUpdate);
-            router.post('/bookDelete', BookController.bookDelete);
             let payLoad = {
                 isbn: 962968474,
             }
@@ -52,7 +47,6 @@ describe('Task Api', () => {
             })
         })
         it("Update The Book Using The ISBN Number", (done) => {
-            router.post('/bookDelete', BookController.bookDelete);
             let payLoad = {
                 isbn: 962968474,
                 title: 'Yuvaraj Test',

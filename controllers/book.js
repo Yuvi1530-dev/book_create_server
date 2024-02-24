@@ -152,7 +152,6 @@ exports.addBookDetail = function (req, res) {
                             appData["error"] = err
                             return res.send(appData);
                         } else {
-                            console.log(next,"next")
                             if (next !=null&&next !='') {
                                 appData["status"] = 1
                                 appData["message"] = "Book added successfully"
@@ -178,7 +177,6 @@ exports.addBookDetail = function (req, res) {
 };
 exports.bookGet = function (req, res) {
     const data = req.body;
-    console.log(req.body,"req")
     const errors = {};
     if (data.isbn == null || data.isbn == '') {
         errors.isbn = ['Book description is required'];
